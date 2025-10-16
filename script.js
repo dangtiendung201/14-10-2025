@@ -265,14 +265,43 @@
 // console.log("Tổng các chữ số là: " + sum);
 
 // 8. Đếm số lượng chữ số của một số.
-let n = parseInt(prompt("Nhập vào n: "));
-let count = 0;
-while (n > 0) {
-    count++;
-    n = Math.floor(n / 10);
+// let n = parseInt(prompt("Nhập vào n: "));
+// let count = 0;
+// while (n > 0) {
+//     count++;
+//     n = Math.floor(n / 10);
+// }
+// console.log(`n có ${count} chữ số`);
+
+// hoặc ép n sang chuỗi rồi lấy độ dài chuỗi.
+
+// 9. Đảo ngược số nguyên (ví dụ: 12345 → 54321).
+// let n = parseInt(prompt("Nhập số nguyên n: "));
+// let reversed = 0;
+// while (n > 0) {
+//     let lastDigit = n % 10; // Lấy chữ số cuối cùng
+//     reversed = reversed * 10 + lastDigit; // Thêm chữ số cuối cùng vào reversed
+//     n = Math.floor(n / 10);
+// }
+// console.log("Số đảo ngược là: " + reversed);
+
+// hoặc ép n sang chuỗi rồi dùng hàm reverse của mảng để đảo ngược chuỗi.
+
+// 10. Kiểm tra số nguyên tố.
+let n = parseInt(prompt("Nhập số nguyên n: "));
+let ktsnt = true;
+if(n < 2){
+    ktsnt = false;
+} else {
+    for(let i = 2; i <= Math.sqrt(n); i++){
+        if(n % i == 0){
+            ktsnt = false;
+            break;
+        }
+    }
 }
-console.log(`n có ${count} chữ số`);
-
-
-
-
+if(ktsnt){
+    console.log(n + " là số nguyên tố.");
+} else{
+    console.log(n + " không phải số nguyên tố.");
+}
