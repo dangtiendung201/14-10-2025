@@ -288,20 +288,270 @@
 // hoặc ép n sang chuỗi rồi dùng hàm reverse của mảng để đảo ngược chuỗi.
 
 // 10. Kiểm tra số nguyên tố.
-let n = parseInt(prompt("Nhập số nguyên n: "));
-let ktsnt = true;
-if(n < 2){
-    ktsnt = false;
-} else {
-    for(let i = 2; i <= Math.sqrt(n); i++){
-        if(n % i == 0){
-            ktsnt = false;
-            break;
-        }
-    }
-}
-if(ktsnt){
-    console.log(n + " là số nguyên tố.");
-} else{
-    console.log(n + " không phải số nguyên tố.");
-}
+// let n = parseInt(prompt("Nhập số nguyên n: "));
+// let ktsnt = true;
+// if(n < 2){
+//     ktsnt = false;
+// } else {
+//     for(let i = 2; i <= Math.sqrt(n); i++){
+//         if(n % i == 0){
+//             ktsnt = false;
+//             break;
+//         }
+//     }
+// }
+// if(ktsnt){
+//     console.log(n + " là số nguyên tố.");
+// } else{
+//     console.log(n + " không phải số nguyên tố.");
+// }
+
+// IV. Mảng
+// 1. Tạo mảng 5 số nguyên, in ra tổng các phần tử.
+// let arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+// for (let i = 0; i< arr.length; i++){
+//     sum += arr[i];
+// }
+// console.log(sum);
+
+// 2. Tìm số lớn nhất, nhỏ nhất trong mảng.
+// let arr = [1, 2, 3, 4, 5];
+// let max = arr[0];
+// let min = arr[0];
+// for(let i = 1; i< arr.length; i++){
+//     if(arr[i] > max){
+//         max = arr[i];
+//     }
+//     if(arr[i] < min){
+//         min = arr[i];
+//     }
+// }
+// console.log("Số lớn nhất là: " + max);
+// console.log("Số nhỏ nhất là: " + min);
+
+// 3. Đếm số phần tử chẵn trong mảng.
+
+// 4. Tính trung bình cộng của các phần tử.
+// let arr = [1, 2, 3, 4, 5];
+// let avg = 0;
+// let sum = 0
+// for(let i = 0; i< arr.length; i++){
+//     sum += arr[i];
+// }
+// avg = sum / arr.length;
+// console.log("Trung bình cộng là: " + avg);
+
+//5. Nhập vào mảng tên sinh viên → sắp xếp theo thứ tự A–Z.
+// let students = [];
+// let numStudents = parseInt(prompt("Nhập số lượng sinh viên:"));
+// //console.log(numStudents);
+// for (let i = 0; i < numStudents; i++) {
+//     let name = prompt("Nhap ten sinh vien: ");
+//     // students.push(name);
+//     students[i] = name;
+// }
+
+// console.log(students);
+// for (let i = 0; i <= students.length - 1; i++) {
+//     for (let j = i + 1; j <= students.length - 1; j++) {
+//         if (students[i] > students[j]) {
+//             let temp = students[i];
+//             students[i] = students[j];
+//             students[j] = temp;
+//         }
+//     }
+// }
+
+// students.sort();
+
+// console.log(students);
+
+// 6.Nối hai mảng lại thành 1 mảng mới .
+// let students = [];
+// let numStudents = parseInt(prompt("Nhập số sinh viên: "));
+// for(let i = 0; i < numStudents; i++){
+//     let name = prompt("Nhập tên sinh viên: ");
+//     students.push(name);
+// }
+// let arr = [];
+// let newStudents = [];
+// for(let i = 0; i<students.length; i++){
+//     newStudents.push(students[i]);
+// }
+// newStudents.push(arr);
+// console.log(newStudents);
+// Trong js co ham concat de noi 2 mang.
+
+// 7. Loại bỏ phần tử trùng lặp trong mảng.
+// let arr = [1, 2, 3, 2, 4, 1, 5];
+// let result = [];
+// for(let i=0; i<arr.length; i++){
+//     if(!result.includes(arr[i])){
+//         result.push(arr[i]);
+//     }   
+
+// }
+// console.log(result);
+
+// 8. Tìm vị trí đầu tiên của phần tử x trong mảng.
+// 9. Đảo ngược mảng mà không dùng reverse().
+// let arr = [1, 2, 3, 4, 5];
+// let result = [];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     result.push(arr[i]);
+// }
+// console.log(result);
+
+// 10. Tính tổng các số lẻ trong mảng.
+// let arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] % 2 != 0){
+//         sum += arr[i];
+//     }
+// }
+// console.log(sum);
+
+// V. Chuỗi(string)
+// 1. Đếm số ký tự trong chuỗi.
+
+// let string = prompt("Nhập chuỗi: ");
+// let count = 0;
+// for(let i=0; i< string.length; i++){
+//     if(string[i] !== " "){
+//         count++;
+//     }
+// }
+// console.log(count);
+
+// 2. Viết hoa ký tự đầu tiên của chuỗi.
+// let string = prompt("Nhập chuỗi: ");
+// let result = string.charAt(0).toUpperCase() + string.slice(1); // charAt(0) lấy kí tự đầu tiên của chuỗi, slice(1) lấy phần còn lại của chuỗi từ vị trí 1
+// console.log(result);
+
+// 3. Đếm số nguyên âm trong chuỗi.
+// let string = prompt("Nhập chuỗi: ");
+// let count = 0;
+
+// 4.Kiểm tra chuỗi có đối xứng (palindrome) hay không.
+// let string = prompt("Nhập chuỗi: ");
+// let normalized = string.toLowerCase();
+// let reversed = normalized.split("").reverse().join(""); // split(""): chuyển chuỗi thành mảng ký tự, reverse(): đảo ngược mảng.,  join(""): nối các ký tự lại thành chuỗi.
+// if (normalized === reversed) {
+//     console.log("Đây là chuỗi đối xứng (palindrome)");
+// } else {
+//     console.log("Không phải chuỗi đối xứng");
+// }
+
+// 5. Tách chuỗi "Xin chào JavaScript" thành mảng từ.
+// let str = "Xin chào JavaScript";
+// let result = str.split(" ");
+// console.log(result);
+
+// 6. Nối hai chuỗi bất kỳ.
+// let str1 = "Hello";
+// let str2 = "world";
+// let result = `${str1} ${str2}`;
+// console.log(result);
+
+// 7. Thay thế tất cả ký tự "a" bằng "@".
+// let string = prompt("Nhập chuỗi: ");
+// let result = string.replaceAll("a", "@");
+// console.log(result);
+
+// 8. Kiểm tra chuỗi có chứa từ khóa "JS" hay không.
+// let str = "Xin chào JavaScript";
+// if(str.includes("JS")){
+//     console.log("Chuỗi có chứa JS");
+// } else{
+//     console.log("Chuỗi ko chứa JS!");
+// }
+
+// 9. Cắt lấy 5 ký tự đầu tiên của chuỗi.
+// let str = "JavaScript";
+// let result = str.slice(0,5);
+// console.log(result);
+
+// 10. Đảo ngược chuỗi nhập vào.
+// let str = prompt("Nhập chuỗi cần đảo ngược:");
+// let reversed = str.split("").reverse().join("");
+// console.log("Chuỗi đảo ngược là:", reversed);
+
+
+// Yêu cầu
+// 1.Tạo một lớp Person
+// class Person {
+//     name = "";
+//     age = 0;
+//     gender = "";
+//     address = "";
+//     introduce() {
+//         console.log(`My name is ${this.name}, I am ${this.age} years old, I am a ${this.gender} and I live in ${this.address}`);
+//     }
+
+//     isAdult() {
+//         if (this.age >= 18) {
+//             return true;
+//         } return false;
+//     }
+// // Tạo phương thức equals so sánh 2 đối  tượng
+//     equals(iscompare) {
+//         if (this.name === iscompare.name && this.age === iscompare.age && this.gender === iscompare.gender && this.address === iscompare.address){
+//             console.log("Hai đối tượng giống nhau")
+//         } else{
+//             console.log("Hai đối tượng khác nhau!")
+//         }
+//     }
+// }
+// let person1 = new Person();
+// let person2 = new Person();
+// person1.name = "John";
+// person1.age = 30;
+// person1.gender = "male";
+// person1.address = "New York";
+// person1.introduce();
+
+// let adultStatus = "";
+// if (person1.isAdult()) {
+//     adultStatus = "Người này là người lớn";
+// } else {
+//     adultStatus = "Người này là trẻ em";
+// }
+
+// person2.name = "Jane";
+// person2.age = 25;
+// person2.gender = "female";
+// person2.address = "Los Angeles";
+// person2.introduce();
+// person2.address = "Hồ Chí Minh";
+
+// let person3 = new Person();
+// person3.name = "Alice";
+// person3.age = 17;
+// person3.gender = "female";
+// person3.address = "New York";
+// person3.introduce();
+
+// if (person1.age > person2.age) {
+//     console.log(`${person1.name} lớn tuổi hơn ${person2.name}`);
+// } else {
+//     console.log(`${person2.name} lớn tuổi hơn ${person1.name}`);
+// }
+
+// // Yêu cầu bổ sung: 1. so sánh toàn bộ đối tượng
+// person1.equals(person2);
+// // 2. Tạo danh sách đối tượng
+// // - Lưu các đối tượng Person vào một danh sách (mảng).
+// // - Lọc danh sách để tìm những người trưởng thành (isAdult() === true).
+// let arr = [person1, person2, person3];
+// for(let i = 0; i<arr.length; i++){
+//     if(arr[i].isAdult() === true){
+//         console.log(`${arr[i].name} là người trưởng thành`);
+//     } else{
+//         console.log(`${arr[i].name} là trẻ con`);
+//     }
+// }
+// // let adults = arr.filter(person => person.isAdult());
+// // console.log("Những người trưởng thành:");
+// // console.log(adults);
